@@ -29,7 +29,7 @@ echo "Skipping fyi.zoey.Boop-GTK - Remove in Prod"
 echo "Skipping com.jetbrains.GoLand - Remove in Prod"
 #flatpak install flathub com.jetbrains.GoLand -y
 echo "Adding OSTree Remote..."
-ostree remote add --no-gpg-verify tau https://innatical-tau.sfo3.digitaloceanspaces.com/
+ostree remote add --no-gpg-verify tau https://ostree.tau.innatical.com/
 echo "Done"
 sleep 0.2
 echo "Rebasing..."
