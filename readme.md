@@ -28,7 +28,7 @@ Note: Manual partitioning accepts all layouts, even those that will not work, pl
 10. Restart your computer and enjoy
 
 ## Converting an Existing Fedora Silverblue, Kionite, iOT or CoreOS Install
-1. Install dialog `sudo rpm-ostree install dialog`
+1. Install dialog `sudo rpm-ostree install dialog` and reboot
 2. Download [convert2tau](https://github.com/tauLinux/beta/blob/main/convert2tau)
 3. Open a terminal and go to the folder where convert2tau is saved.
 4. Make it executable using `chmod u+x convert2tau`
