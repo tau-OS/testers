@@ -1,0 +1,68 @@
+#!/bin/sh
+clear
+if [[ $(id -u) -ne 0 ]] ; then dialog --msgbox "convert2tau Must Run as Superuser." 10 30 ; clear ; exit 1 ; fi
+dialog --backtitle "tauOS Conversion Program" --infobox "Program for Converting RPM-OSTree systems to tauOS
+
+
+
+
+
+
+(C) 2022 Innatical, LLC" 15 50
+sleep 2
+dialog --backtitle "tauOS Conversion Program" --yesno "THIS PROGRAM COMES WITH ABSOLUTELY NO WARRANTY. INNATICAL LLC IS NOT RESPONSIBLE FOR DAMAGE TO NETWORKS OR SYSTEMS.
+
+Do You Agree?" 15 50
+response=$?
+case $response in
+   0) ;;
+   1) clear ; exit;;
+esac
+echo percentage | dialog --backtitle "tauOS Conversion Program" --gauge "Adding Flathub" height width percent
+echo "0" | dialog --backtitle "tauOS Conversion Program" --gauge "Adding Flathub Remote" 10 70 0
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+echo "100" | dialog --backtitle "tauOS Conversion Program" --gauge "Done!" 10 70 0
+sleep
+echo percentage | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Flatpak Applications..." height width percent
+echo "0" | dialog --backtitle "tauOS Conversion Program" --gauge "Please wait" 10 70 0
+echo "10" | dialog --backtitle "tauOS Conversion Program" --gauge "Skipping flathub/org.gnome.TextEditor - Favor Nightly for now" 10 70 0
+#flatpak install flathub org.gnome.TextEditor -y Favor Nightly for now
+echo "20" | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Shortwave from Flathub" 10 70 0
+flatpak install flathub de.haeckerfelix.Shortwave -y >&-
+echo "40" | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Notejot from Flathub" 10 70 0
+flatpak install flathub io.github.lainsce.Notejot -y >&-
+echo "50" | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Geary from Flathub" 10 70 0
+flatpak install flathub org.gnome.Geary -y >&-
+echo "60" | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Podcats from Flathub" 10 70 0
+flatpak install flathub org.gnome.Podcasts -y >&-
+echo "80" | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Music from Flathub" 10 70 0
+flatpak install flathub org.gnome.Music -y >&-
+echo "100" | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Power Statistics from Flathub" 10 70 0
+flatpak install flathub org.gnome.PowerStats -y >&-
+#Development tools/Prerelease Software - Remove in production
+echo percentage | dialog --backtitle "tauOS Conversion Program" --gauge "Adding GNOME Nightly" height width percent
+echo "0" | dialog --backtitle "tauOS Conversion Program" --gauge "Adding GNOME Nightly Remote..." 10 70 0
+flatpak remote-add --if-not-exists gnome-nightly https://nightly.gnome.org/gnome-nightly.flatpakrepo >&-
+echo "100" | dialog --backtitle "tauOS Conversion Program" --gauge "Done!" 10 70 0
+echo percentage | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Flatpak Applications" height width percent
+echo "10" | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Extensions from Flathub" 10 70 0
+flatpak install flathub org.gnome.Extensions -y >&-
+echo "20" | dialog --backtitle "tauOS Conversion Program" --gauge "Installing Text Editor from GNOME Nightly" 10 70 0
+flatpak install gnome-nightly org.gnome.TextEditor -y >&-
+echo "80" | dialog --backtitle "tauOS Conversion Program" --gauge "Skipping flathub/org.gnome.Builder" 10 70 0
+#flatpak install flathub org.gnome.Builder -y
+echo "85" | dialog --backtitle "tauOS Conversion Program" --gauge "Skipping gnome-nightly/fyi.zoey.Boop-GTK" 10 70 0
+#flatpak install flathub fyi.zoey.Boop-GTK -y
+echo "90" | dialog --backtitle "tauOS Conversion Program" --gauge "Skipping gnome-nightly/fyi.zoey.Boop-GTK" 10 70 0
+#flatpak install flathub com.jetbrains.GoLand -y
+echo "100" | dialog --gauge "Done!" 10 70 0
+sleep 1
+echo percentage | dialog --gauge "Switching Tree" height width percent
+echo "1" | dialog --backtitle "tauOS Conversion Program" --gauge "Adding tauOS OSTree Remote" 10 70 0
+ostree remote add --no-gpg-verify tau https://ostree.tau.innatical.com >&-
+echo "50" | dialog --backtitle "tauOS Conversion Program" --gauge "Rebasing..." 10 70 0
+echo "Rebasing..."
+rpm-ostree rebase tau:tau/desktop/x86_64/stable >&-
+echo "100" | dialog --backtitle "tauOS Conversion Program" --gauge "Done!" 10 70 0
+dialog --backtitle "tauOS Conversion Program" --msgbox "Save All Work! Your System Will Restart When You Press OK" 15 40
+systemctl reboot
