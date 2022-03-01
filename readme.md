@@ -1,7 +1,8 @@
 # How to Test tauOS
 
 ### Please Backup Your System and Review Known Issues before following These Instructions.
-## Installing Fresh
+
+## Installing from tauOS Images - THIS METHOD IS EXPERIMENTAL, USE AT YOUR OWN RISK
 1. Download the latest [ISO Build](https://sourceview.innatical.com/tauos/isos/-/releases)
 2. Download [BalenaEtcher](https://www.balena.io/etcher/)
 3. Get a USB Drive, It should hold at least 4GB.
@@ -34,7 +35,7 @@ Note: Your System will reboot after the conversion. Save any work.
 
 
 
-## Installing Fresh (Old Method)
+## Installing from Fedora Server Images
 1. Download this [file.](https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/x86_64/iso/Fedora-Server-netinst-x86_64-35-1.2.iso) Save it somewhere you can find it again.
 2. Download [BalenaEtcher](https://www.balena.io/etcher/)
 3. Get a USB Drive, It should hold at least 4GB.
