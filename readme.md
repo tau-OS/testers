@@ -2,6 +2,39 @@
 
 ### Please Backup Your System and review Known issues before following These Instructions.
 ## Installing Fresh
+1. Download the latest [ISO Build](https://sourceview.innatical.com/tauos/isos/-/releases)
+2. Download [BalenaEtcher](https://www.balena.io/etcher/)
+3. Get a USB Drive, It should hold at least 4GB.
+4. Open BalenaEtcher, select the file you downloaded earlier, then your drive, finally click flash.
+5. Now to use the USB Drive instead of your hard drive.
+
+If you use an Apple Computer, hold the `Option` key after turning it on. You will see a menu with at least 2 options, use the mouse to click the option that says "UEFI boot".
+
+  If you use a modern Windows computer, hold the `Shift` key and press Restart in your start menu. A menu on a blue background will appear. First Click "Use a Device", then click your drive (It may have "UEFI" in the name, it is supposed to do this.
+
+6. Select either option and wait for the installation program to load.
+
+*Note*: Manual partitioning accepts all layouts, even those that will not work, please use automatic partitioning for the time being.
+
+7. Follow the instructions shown by the installer
+
+**WARNING**: Step 7 will erase *EVERYTHING* on your drive. Do not continue if you have important files on your drive.
+
+8. Restart your computer and enjoy
+
+
+## Converting an Existing Fedora Silverblue, Kionite, iOT or CoreOS Install
+1. Install dialog `sudo rpm-ostree install dialog` and reboot
+2. Download [convert2tau](https://sourceview.innatical.com/tauos/beta/-/blob/main/convert2tau)
+3. Open a terminal and go to the folder where convert2tau is saved.
+4. Make it executable using `chmod u+x convert2tau`
+Note: Your System will reboot after the conversion. Save any work.
+5. Run convert2tau as root using `sudo bash convert2tau`
+6. Enjoy tauOS
+
+
+
+## Installing Fresh (Old Method)
 1. Download this [file.](https://download.fedoraproject.org/pub/fedora/linux/releases/35/Server/x86_64/iso/Fedora-Server-netinst-x86_64-35-1.2.iso) Save it somewhere you can find it again.
 2. Download [BalenaEtcher](https://www.balena.io/etcher/)
 3. Get a USB Drive, It should hold at least 4GB.
@@ -26,12 +59,3 @@ If you use an Apple Computer, hold the `Option` key after turning it on. You wil
 Note: Manual partitioning accepts all layouts, even those that will not work, please use automatic partitioning for the time being.
 
 10. Restart your computer and enjoy
-
-## Converting an Existing Fedora Silverblue, Kionite, iOT or CoreOS Install
-1. Install dialog `sudo rpm-ostree install dialog` and reboot
-2. Download [convert2tau](https://sourceview.innatical.com/tauos/beta/-/blob/main/convert2tau)
-3. Open a terminal and go to the folder where convert2tau is saved.
-4. Make it executable using `chmod u+x convert2tau`
-Note: Your System will reboot after the conversion. Save any work.
-5. Run convert2tau as root using `sudo bash convert2tau`
-6. Enjoy tauOS
