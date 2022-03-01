@@ -1,6 +1,6 @@
 # How to Test tauOS
 
-### Please Backup Your System and review Known issues before following These Instructions.
+### Please Backup Your System and Review Known Issues before following These Instructions.
 ## Installing Fresh
 1. Download the latest [ISO Build](https://sourceview.innatical.com/tauos/isos/-/releases)
 2. Download [BalenaEtcher](https://www.balena.io/etcher/)
