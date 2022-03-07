@@ -25,13 +25,12 @@ If you use an Apple Computer, hold the `Option` key after turning it on. You wil
 
 
 ## Converting an Existing Fedora Silverblue, Kionite, iOT or CoreOS Install
-1. Install dialog `sudo rpm-ostree install dialog` and reboot
-2. Download [convert2tau](https://sourceview.innatical.com/tauos/beta/-/blob/main/convert2tau)
-3. Open a terminal and go to the folder where convert2tau is saved.
-4. Make it executable using `chmod u+x convert2tau`
+1. Download [convert2tau](https://sourceview.innatical.com/tauos/beta/-/blob/main/convert2tau)
+2. Open a terminal and go to the folder where convert2tau is saved.
+3. Make it executable using `chmod u+x convert2tau`
 Note: Your System will reboot after the conversion. Save any work.
-5. Run convert2tau as root using `sudo bash convert2tau`
-6. Enjoy tauOS
+4. Run convert2tau as root using `sudo bash convert2tau`
+5. Enjoy tauOS
 
 
 

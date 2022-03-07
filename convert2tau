@@ -1,4 +1,6 @@
 #!/bin/sh
+rpm-ostree install dialog
+rpm-ostree ex apply-live
 clear
 if [[ $(id -u) -ne 0 ]] ; then dialog --msgbox "convert2tau Must Run as Superuser." 10 30 ; clear ; exit 1 ; fi
 dialog --backtitle "tauOS Conversion Program" --infobox "Program for Converting RPM-OSTree systems to tauOS
