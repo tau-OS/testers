@@ -3,7 +3,7 @@
 ### Please Backup Your System and Review Known Issues before following These Instructions.
 
 ## Installing from tauOS Images
-1. Download the latest [ISO Build](https://sourceview.innatical.com/tauos/isos/-/releases)
+1. Download the latest [ISO Build](https://github.com/tau-OS/isos/actions/workflows/build.yml)
 2. Download [BalenaEtcher](https://www.balena.io/etcher/)
 3. Get a USB Drive, It should hold at least 4GB.
 4. Open BalenaEtcher, select the file you downloaded earlier, then your drive, finally click flash.
@@ -25,7 +25,7 @@ If you use an Apple Computer, hold the `Option` key after turning it on. You wil
 
 
 ## Converting an Existing Fedora Silverblue, Kionite, iOT or CoreOS Install
-1. Download [convert2tau](https://sourceview.innatical.com/tauos/beta/-/blob/main/convert2tau)
+1. Download [convert2tau](https://github.com/tau-OS/testers/blob/main/convert2tau)
 2. Open a terminal and go to the folder where convert2tau is saved.
 3. Make it executable using `chmod u+x convert2tau`
 Note: Your System will reboot after the conversion. Save any work.
