@@ -1,6 +1,5 @@
 #!/bin/sh
 clear
-if [[ $(id -u) -ne 0 ]] ; then echo "convert2tau Must Run as Superuser."; clear ; exit 1 ; fi
 
 echo "THIS PROGRAM COMES WITH ABSOLUTELY NO WARRANTY. FYRA LABS IS NOT RESPONSIBLE FOR DAMAGE TO NETWORKS OR SYSTEMS."
 
