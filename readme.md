@@ -31,7 +31,6 @@ If you use an Apple Computer, hold the `Option` key after turning it on. You wil
 Note: Your System will reboot after the conversion. Save any work.
 4. Run convert2tau as root using `sudo bash convert2tau`
 5. Enjoy tauOS
-*Note*: If convert2tau fails dep installation, remove the 2 rpm-ostree operations from the script and reboot
 
 
 
