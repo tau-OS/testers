@@ -23,6 +23,6 @@ flatpak install gnome-nightly org.gnome.TextEditor -y
 flatpak install gnome-nightly org.gnome.Builder -y
 flatpak install flathub fyi.zoey.Boop-GTK -y
 echo "Adding tauOS OSTree remote"
-ostree remote add --no-gpg-verify tau metalink=https://repo.tauos.co/ostree
+ostree remote add --no-gpg-verify tau https://repo.tauos.co/ostree
 rpm-ostree rebase tau:tau/home/1.1/x86_64
 #systemctl reboot
