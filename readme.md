@@ -1,3 +1,24 @@
+# tauOS is being Archived 
+The projects in this org are being archived. They will be archived in-place in this org instead of being moved to [the Graveyard](https://github.com/fyralabs-graveyard), some components deprecated before 2026 are already in the Graveyard.
+
+[See our post about the end of the tauOS Project ->](https://blog.fyralabs.com/the-future-of-tauos/)
+
+### libhelium Deprecation
+libhelium will be deprecated in October 2026 when Ultramarine components have shifted off it.
+
+### tauOS Apps Deprecation
+tauOS Apps will be deprecated in July 2026, alternatives will be linked in the READMEs of their repos. Thank you for using our apps this long!
+
+### System Components & The OS Generally
+System Components and the OS itself are deprecated as of April 2026. We suggest checking out our other project, [Ultramarine](https://ultramarine-linux.org).
+
+### Sync Moving to Fyra Labs
+Sync functionality will be moving to the [Fyra Labs org](https://github.com/fyralabs).
+
+# Old README
+
+
+
 # How to Test tauOS
 
 ### Please Backup Your System and Review Known Issues before following These Instructions.
